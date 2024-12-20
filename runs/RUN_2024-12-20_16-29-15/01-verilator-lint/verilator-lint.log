@@ -1,0 +1,16 @@
+%Warning-PINMISSING: /home/lanh/finalvlsi/sky130_sram_1r1w_8x16_8_wrapper.v:19:26: Cell has missing pin: 'vccd1'
+   19 |  sky130_sram_1r1w_8x16_8 sram_0 (  
+      |                          ^~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.018
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /home/lanh/finalvlsi/sky130_sram_1r1w_8x16_8_wrapper.v:19:26: Cell has missing pin: 'vssd1'
+   19 |  sky130_sram_1r1w_8x16_8 sram_0 (  
+      |                          ^~~~~~
+%Warning-PINMISSING: /home/lanh/finalvlsi/sky130_sram_1r1w_8x16_8_wrapper.v:30:26: Cell has missing pin: 'vccd1'
+   30 |  sky130_sram_1r1w_8x16_8 sram_1 (  
+      |                          ^~~~~~
+%Warning-PINMISSING: /home/lanh/finalvlsi/sky130_sram_1r1w_8x16_8_wrapper.v:30:26: Cell has missing pin: 'vssd1'
+   30 |  sky130_sram_1r1w_8x16_8 sram_1 (  
+      |                          ^~~~~~
+%Error: Specified --top-module 'sfifo' was not found in design.
+%Error: Exiting due to 1 error(s)

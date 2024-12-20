@@ -1,0 +1,8 @@
+{
+        "DESIGN_NAME": "sfifo",
+        "VERILOG_FILES": ["dir::sky130_sram_1r1w_8x16_8.v", "dir::csv_sfifo_ram.v","dir::sky130_sram_1r1w_8x16_8_wrapper.v"],
+        "CLOCK_PORT": "clk",
+        "CLOCK_PERIOD": 5.0,
+        "FALLBACK_SDC_FILE": "dir::init_sfifo.sdc"
+	
+}
