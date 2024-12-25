@@ -1,4 +1,4 @@
-
+`timescale 1ns/1ps
 module sky130_sram_1r1w_8x16_8(
 `ifdef USE_POWER_PINS
     vccd1,
@@ -22,27 +22,27 @@ module sky130_sram_1r1w_8x16_8(
     inout vccd1;
     inout vssd1;
 `endif
-  input  clk0; // clock
+  input   clk0; // clock
   input   csb0; // active low chip select
-  input [ADDR_WIDTH-1:0]  addr0;
-  input [DATA_WIDTH-1:0]  din0;
-  input  clk1; // clock
+  input [ADDR_WIDTH-1:0]    addr0;
+  input [DATA_WIDTH-1:0]    din0;
+  input   clk1; // clock
   input   csb1; // active low chip select
-  input [ADDR_WIDTH-1:0]  addr1;
-  output [DATA_WIDTH-1:0] dout1;
+  input  [ADDR_WIDTH-1:0]   addr1;
+  output [DATA_WIDTH-1:0]   dout1;
 
-  reg [DATA_WIDTH-1:0]    mem [0:RAM_DEPTH-1];
+  reg   [DATA_WIDTH-1:0]    mem [0:RAM_DEPTH-1];
 
   reg  csb0_reg;
-  reg [ADDR_WIDTH-1:0]  addr0_reg;
-  reg [DATA_WIDTH-1:0]  din0_reg;
+  reg   [ADDR_WIDTH-1:0]    addr0_reg;
+  reg   [DATA_WIDTH-1:0]    din0_reg;
 
   // All inputs are registers
   always @(posedge clk0)
   begin
-    csb0_reg = csb0;
+    csb0_reg  = csb0;
     addr0_reg = addr0;
-    din0_reg = din0;
+    din0_reg  = din0;
     if ( !csb0_reg && VERBOSE )
       $display($time," Writing %m addr0=%b din0=%b",addr0_reg,din0_reg);
   end
